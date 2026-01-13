@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import {
   FaReact,
   FaNodeJs,
@@ -20,7 +20,7 @@ import {
 
 export default function SkillsPage() {
   // Motion variant for badges
-  const badgeVariant = {
+  const badgeVariant: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: (custom: number) => ({
       opacity: 1,
