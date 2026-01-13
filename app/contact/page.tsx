@@ -30,7 +30,7 @@ export default function ContactPage() {
         {/* Phone */}
 
         <a
-          href="tel:+918XXXXXXXXX"
+          href="tel:+919552193740"
           className="group border border-slate-700 rounded-xl p-5 flex items-center gap-4 hover:border-cyan-400 glow transition"
         >
           <FaPhone className="text-cyan-400 text-2xl transition-transform duration-300 rotate-100" />
