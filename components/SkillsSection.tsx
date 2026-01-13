@@ -1,4 +1,4 @@
-import { FaJava, FaReact, FaNodeJs, FaPython, FaCss3Alt } from "react-icons/fa";
+import { FaJava, FaReact, FaNodeJs, FaPython } from "react-icons/fa";
 import {
   SiJavascript,
   SiTypescript,
@@ -12,8 +12,24 @@ import {
   SiC,
 } from "react-icons/si";
 
+type SkillName =
+  | "Java"
+  | "JavaScript"
+  | "TypeScript"
+  | "React.js"
+  | "Next.js"
+  | "Spring Boot"
+  | "Node.js"
+  | "Express.js"
+  | "MongoDB"
+  | "MySQL"
+  | "PostgreSQL"
+  | "Tailwind CSS"
+  | "Python"
+  | "C";
+
 export default function SkillsSection() {
-  const skills = [
+  const skills: SkillName[] = [
     "Java",
     "JavaScript",
     "TypeScript",
@@ -29,7 +45,8 @@ export default function SkillsSection() {
     "Python",
     "C",
   ];
-  const skillIcons = {
+
+  const skillIcons: Record<SkillName, JSX.Element> = {
     Java: <FaJava size={40} className="mx-auto text-orange-600" />,
     JavaScript: <SiJavascript size={40} className="mx-auto text-yellow-400" />,
     TypeScript: <SiTypescript size={40} className="mx-auto text-blue-500" />,
@@ -55,14 +72,16 @@ export default function SkillsSection() {
   return (
     <section>
       <h2 className="text-3xl font-bold text-cyan-400 mb-6">Skills</h2>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {skills.map((skill) => (
           <div
             key={skill}
-            className="border border-slate-700 rounded-lg px-4 py-2 text-center hover:border-cyan-400 transition"
+            className="border border-slate-700 rounded-xl px-4 py-4 text-center 
+                       hover:border-cyan-400 hover:scale-105 transition duration-300"
           >
             <div className="mb-3 flex justify-center">{skillIcons[skill]}</div>
-            {skill}
+            <p className="text-sm text-slate-300">{skill}</p>
           </div>
         ))}
       </div>
