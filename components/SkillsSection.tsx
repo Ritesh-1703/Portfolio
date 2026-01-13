@@ -46,7 +46,7 @@ export default function SkillsSection() {
     "C",
   ];
 
-  const skillIcons: Record<SkillName, JSX.Element> = {
+  const skillIcons: Record<SkillName, React.ReactNode> = {
     Java: <FaJava size={40} className="mx-auto text-orange-600" />,
     JavaScript: <SiJavascript size={40} className="mx-auto text-yellow-400" />,
     TypeScript: <SiTypescript size={40} className="mx-auto text-blue-500" />,
