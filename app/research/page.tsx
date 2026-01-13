@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 export default function ResearchPage() {
   const containerVariant = {
@@ -11,7 +11,7 @@ export default function ResearchPage() {
     },
   };
 
-  const cardVariant = {
+  const cardVariant: Variants = {
     hidden: { opacity: 0, y: 40 },
     visible: {
       opacity: 1,
