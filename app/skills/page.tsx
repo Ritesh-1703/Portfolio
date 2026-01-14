@@ -1,5 +1,6 @@
 "use client";
 
+import CertificationsSection from "@/components/Certifications";
 import { motion, Variants } from "framer-motion";
 import {
   FaReact,
@@ -115,21 +116,6 @@ export default function SkillsPage() {
         software solutions.
       </p>
 
-      {/* Floating Icons
-      <div className="relative h-64 flex flex-wrap justify-center gap-8 mb-10">
-        {Object.entries(skills).map(([_, items]) =>
-          items.map((skill, index) => (
-            <div
-              key={skill.name}
-              className="animate-drift"
-              style={{ animationDelay: `${index * 0.5}s` }}
-            >
-              {skill.icon}
-            </div>
-          ))
-        )}
-      </div> */}
-
       {/* Skill Sections */}
       <div className="grid md:grid-cols-2 gap-10">
         {Object.entries(skills).map(([category, items], idx) => (
@@ -157,6 +143,7 @@ export default function SkillsPage() {
           </div>
         ))}
       </div>
+      <CertificationsSection />
     </main>
   );
 }
