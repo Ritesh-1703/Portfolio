@@ -30,7 +30,7 @@ export default function Navbar() {
             Projects
           </Link>
           <Link href="/skills" className="hover:text-cyan-400 transition">
-            Skills
+            Skills&Certification
           </Link>
           <Link href="/research" className="hover:text-cyan-400 transition">
             Research
@@ -64,7 +64,7 @@ export default function Navbar() {
             Projects
           </Link>
           <Link href="/skills" className="hover:text-cyan-400 transition">
-            Skills
+            Skills & Certifications
           </Link>
           <Link href="/research" className="hover:text-cyan-400 transition">
             Research
