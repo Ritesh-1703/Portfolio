@@ -10,7 +10,9 @@ import {
   SiPostgresql,
   SiTailwindcss,
   SiC,
+  SiKotlin,
 } from "react-icons/si";
+import { TbBrandReactNative } from "react-icons/tb";
 
 type SkillName =
   | "Java"
@@ -26,13 +28,17 @@ type SkillName =
   | "PostgreSQL"
   | "Tailwind CSS"
   | "Python"
-  | "C";
+  | "C"
+  | "Kotlin"
+  | "React Native";
 
 export default function SkillsSection() {
   const skills: SkillName[] = [
     "Java",
     "JavaScript",
     "TypeScript",
+    "Kotlin",
+    "React Native",
     "React.js",
     "Next.js",
     "Spring Boot",
@@ -67,6 +73,10 @@ export default function SkillsSection() {
     ),
     Python: <FaPython size={40} className="mx-auto text-yellow-400" />,
     C: <SiC size={40} className="mx-auto text-gray-400" />,
+    Kotlin: <SiKotlin size={40} className="mx-auto text-purple-500" />,
+    "React Native": (
+      <TbBrandReactNative size={40} className="mx-auto text-blue-400" />
+    ),
   };
 
   return (
@@ -88,7 +98,6 @@ export default function SkillsSection() {
     </section>
   );
 }
-
 // import { FaJava, FaReact, FaNodeJs, FaPython } from "react-icons/fa";
 // import {
 //   SiJavascript,

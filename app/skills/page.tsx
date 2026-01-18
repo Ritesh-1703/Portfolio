@@ -17,7 +17,9 @@ import {
   SiTypescript,
   SiTailwindcss,
   SiNextdotjs,
+  SiKotlin,
 } from "react-icons/si";
+import { TbBrandReactNative } from "react-icons/tb";
 
 export default function SkillsPage() {
   // Motion variant for badges
@@ -47,10 +49,16 @@ export default function SkillsPage() {
         icon: <span className="font-bold">C</span>,
         color: "text-blue-400",
       },
+      { name: "Kotlin", icon: <SiKotlin />, color: "text-purple-500" },
     ],
     Frontend: [
       { name: "React.js", icon: <FaReact />, color: "text-cyan-400" },
       { name: "Next.js", icon: <SiNextdotjs />, color: "text-white" },
+      {
+        name: "React Native",
+        icon: <TbBrandReactNative />,
+        color: "text-blue-400",
+      },
       { name: "HTML5", icon: <span>📄</span>, color: "text-orange-500" },
       { name: "CSS3", icon: <span>🎨</span>, color: "text-blue-500" },
       { name: "Bootstrap", icon: <span>💠</span>, color: "text-purple-500" },
