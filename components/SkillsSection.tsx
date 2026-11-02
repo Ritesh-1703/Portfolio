@@ -1,97 +1,105 @@
-import { FaJava, FaReact, FaNodeJs, FaPython } from "react-icons/fa";
+import { FaJava, FaReact, FaNodeJs, FaAndroid } from "react-icons/fa";
 import {
   SiJavascript,
   SiTypescript,
   SiNextdotjs,
   SiSpringboot,
-  SiExpress,
   SiMongodb,
   SiMysql,
   SiPostgresql,
-  SiTailwindcss,
-  SiC,
+  SiFirebase,
+  SiFlutter,
   SiKotlin,
+  SiTailwindcss,
 } from "react-icons/si";
-import { TbBrandReactNative } from "react-icons/tb";
 
-type SkillName =
-  | "Java"
-  | "JavaScript"
-  | "TypeScript"
-  | "React.js"
-  | "Next.js"
-  | "Spring Boot"
-  | "Node.js"
-  | "Express.js"
-  | "MongoDB"
-  | "MySQL"
-  | "PostgreSQL"
-  | "Tailwind CSS"
-  | "Python"
-  | "C"
-  | "Kotlin"
-  | "React Native";
+type Skill = {
+  name: string;
+  icon: React.ReactNode;
+};
 
-export default function SkillsSection() {
-  const skills: SkillName[] = [
-    "Java",
-    "JavaScript",
-    "TypeScript",
-    "Kotlin",
-    "React Native",
-    "React.js",
-    "Next.js",
-    "Spring Boot",
-    "Node.js",
-    "Express.js",
-    "MongoDB",
-    "MySQL",
-    "PostgreSQL",
-    "Tailwind CSS",
-    "Python",
-    "C",
-  ];
-
-  const skillIcons: Record<SkillName, React.ReactNode> = {
-    Java: <FaJava size={40} className="mx-auto text-orange-600" />,
-    JavaScript: <SiJavascript size={40} className="mx-auto text-yellow-400" />,
-    TypeScript: <SiTypescript size={40} className="mx-auto text-blue-500" />,
-    "React.js": (
+const skills: Skill[] = [
+  {
+    name: "Kotlin",
+    icon: <SiKotlin size={40} className="mx-auto text-purple-500" />,
+  },
+  {
+    name: "Java",
+    icon: <FaJava size={40} className="mx-auto text-orange-500" />,
+  },
+  {
+    name: "Flutter",
+    icon: <SiFlutter size={40} className="mx-auto text-cyan-400" />,
+  },
+  {
+    name: "Android",
+    icon: <FaAndroid size={40} className="mx-auto text-green-400" />,
+  },
+  {
+    name: "React.js",
+    icon: (
       <FaReact size={40} className="mx-auto text-cyan-400 animate-spin-slow" />
     ),
-    "Next.js": <SiNextdotjs size={40} className="mx-auto text-white" />,
-    "Spring Boot": (
-      <SiSpringboot size={40} className="mx-auto text-green-600" />
-    ),
-    "Node.js": <FaNodeJs size={40} className="mx-auto text-green-500" />,
-    "Express.js": <SiExpress size={40} className="mx-auto text-gray-300" />,
-    MongoDB: <SiMongodb size={40} className="mx-auto text-green-400" />,
-    MySQL: <SiMysql size={40} className="mx-auto text-blue-600" />,
-    PostgreSQL: <SiPostgresql size={40} className="mx-auto text-sky-500" />,
-    "Tailwind CSS": (
-      <SiTailwindcss size={40} className="mx-auto text-cyan-400" />
-    ),
-    Python: <FaPython size={40} className="mx-auto text-yellow-400" />,
-    C: <SiC size={40} className="mx-auto text-gray-400" />,
-    Kotlin: <SiKotlin size={40} className="mx-auto text-purple-500" />,
-    "React Native": (
-      <TbBrandReactNative size={40} className="mx-auto text-blue-400" />
-    ),
-  };
+  },
+  {
+    name: "Next.js",
+    icon: <SiNextdotjs size={40} className="mx-auto text-white" />,
+  },
+  {
+    name: "Spring Boot",
+    icon: <SiSpringboot size={40} className="mx-auto text-green-500" />,
+  },
+  {
+    name: "Node.js",
+    icon: <FaNodeJs size={40} className="mx-auto text-green-400" />,
+  },
+  {
+    name: "Firebase",
+    icon: <SiFirebase size={40} className="mx-auto text-yellow-400" />,
+  },
+  {
+    name: "MySQL",
+    icon: <SiMysql size={40} className="mx-auto text-blue-500" />,
+  },
+  {
+    name: "MongoDB",
+    icon: <SiMongodb size={40} className="mx-auto text-green-400" />,
+  },
+  {
+    name: "PostgreSQL",
+    icon: <SiPostgresql size={40} className="mx-auto text-sky-400" />,
+  },
+  {
+    name: "TypeScript",
+    icon: <SiTypescript size={40} className="mx-auto text-blue-500" />,
+  },
+  {
+    name: "JavaScript",
+    icon: <SiJavascript size={40} className="mx-auto text-yellow-400" />,
+  },
+  {
+    name: "Tailwind CSS",
+    icon: <SiTailwindcss size={40} className="mx-auto text-teal-400" />,
+  },
+];
 
+export default function SkillsSection() {
   return (
     <section>
-      <h2 className="text-3xl font-bold text-cyan-400 mb-6">Skills</h2>
+      <h2 className="text-3xl font-bold text-cyan-400 mb-2">Core Skills</h2>
+      <p className="text-slate-400 text-sm mb-6">
+        Technologies I work with professionally and in production.
+      </p>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-3 md:grid-cols-5 gap-4">
         {skills.map((skill) => (
           <div
-            key={skill}
-            className="border border-slate-700 rounded-xl px-4 py-4 text-center 
+            key={skill.name}
+            className="border border-slate-700 rounded-xl px-3 py-4 text-center
                        hover:border-cyan-400 hover:scale-105 transition duration-300"
           >
-            <div className="mb-3 flex justify-center">{skillIcons[skill]}</div>
-            <p className="text-sm text-slate-300">{skill}</p>
+            <div className="mb-3 flex justify-center">{skill.icon}</div>
+            <p className="text-xs text-slate-300">{skill.name}</p>
           </div>
         ))}
       </div>
