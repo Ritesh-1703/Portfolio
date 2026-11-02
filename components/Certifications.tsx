@@ -10,10 +10,10 @@ const certifications = [
     image: "/certificates/DS.png",
   },
   {
-    title: "Ethical Hacking",
-    provider: "NPTEL",
-    skills: "Cyber Security, Networking",
-    image: "/certificates/EH.png",
+    title: "React and Redux",
+    provider: "Knowledge Gate",
+    skills: "React.js, Redux",
+    image: "/certificates/RR.png",
   },
   {
     title: "Introduction to Spring Framework 101",
@@ -28,10 +28,10 @@ const certifications = [
     image: "/certificates/python.png",
   },
   {
-    title: "React and Redux",
-    provider: "Knowledge Gate",
-    skills: "React.js, Redux",
-    image: "/certificates/RR.png",
+    title: "Ethical Hacking",
+    provider: "NPTEL",
+    skills: "Cyber Security, Networking",
+    image: "/certificates/EH.png",
   },
 ];
 
