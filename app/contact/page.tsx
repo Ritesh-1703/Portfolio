@@ -17,13 +17,13 @@ export default function ContactPage() {
       <div className="grid md:grid-cols-2 gap-6">
         {/* Email */}
         <a
-          href="mailto:riteshdhamale@gmail.com"
+          href="mailto:ritesh.dhamale17@gmail.com"
           className="border border-slate-700 rounded-xl p-5 flex items-center gap-4 hover:border-cyan-400 glow transition"
         >
           <FaEnvelope className="text-cyan-400 text-2xl" />
           <div>
             <p className="text-sm text-slate-400">Email</p>
-            <p className="text-slate-200">riteshdhamale@gmail.com</p>
+            <p className="text-slate-200">ritesh.dhamale17@gmail.com</p>
           </div>
         </a>
 
