@@ -18,7 +18,7 @@ const socialLinks = [
   },
   {
     icon: <FaLinkedin size={18} />,
-    href: "www.linkedin.com/in/ritesh-dhamale",
+    href: "https://www.linkedin.com/in/ritesh-dhamale",
     label: "LinkedIn",
   },
   // {
@@ -102,7 +102,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="www.linkedin.com/in/ritesh-dhamale"
+                  href="https://www.linkedin.com/in/ritesh-dhamale"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-slate-400 hover:text-cyan-400 transition"
