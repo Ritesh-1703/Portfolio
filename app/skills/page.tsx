@@ -9,6 +9,8 @@ import {
   FaPhp,
   FaGitAlt,
   FaDatabase,
+  FaAndroid,
+  FaFire,
 } from "react-icons/fa";
 import {
   SiMongodb,
@@ -18,11 +20,17 @@ import {
   SiTailwindcss,
   SiNextdotjs,
   SiKotlin,
+  SiFlutter,
+  SiDart,
+  SiPostgresql,
+  SiFirebase,
+  SiAndroidstudio,
+  SiEclipseide,
+  SiSpring,
 } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 
 export default function SkillsPage() {
-  // Motion variant for badges
   const badgeVariant: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: (custom: number) => ({
@@ -32,11 +40,6 @@ export default function SkillsPage() {
     }),
   };
 
-  {
-    /* Floating Icons */
-  }
-
-  // Skill data
   const skills = {
     "Programming Languages": [
       { name: "Java", icon: <FaJava />, color: "text-orange-600" },
@@ -50,22 +53,32 @@ export default function SkillsPage() {
         color: "text-blue-400",
       },
       { name: "Kotlin", icon: <SiKotlin />, color: "text-purple-500" },
+      { name: "Dart", icon: <SiDart />, color: "text-cyan-500" },
     ],
-    Frontend: [
-      { name: "React.js", icon: <FaReact />, color: "text-cyan-400" },
-      { name: "Next.js", icon: <SiNextdotjs />, color: "text-white" },
+    "Mobile Development": [
+      {
+        name: "Android (Kotlin)",
+        icon: <FaAndroid />,
+        color: "text-green-400",
+      },
+      { name: "Android (Java)", icon: <FaAndroid />, color: "text-green-500" },
+      { name: "Flutter", icon: <SiFlutter />, color: "text-cyan-400" },
       {
         name: "React Native",
         icon: <TbBrandReactNative />,
         color: "text-blue-400",
       },
+    ],
+    Frontend: [
+      { name: "React.js", icon: <FaReact />, color: "text-cyan-400" },
+      { name: "Next.js", icon: <SiNextdotjs />, color: "text-white" },
       { name: "HTML5", icon: <span>📄</span>, color: "text-orange-500" },
       { name: "CSS3", icon: <span>🎨</span>, color: "text-blue-500" },
       { name: "Bootstrap", icon: <span>💠</span>, color: "text-purple-500" },
       { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "text-teal-400" },
     ],
     Backend: [
-      { name: "Spring Boot", icon: <FaJava />, color: "text-orange-600" },
+      { name: "Spring Boot", icon: <SiSpring />, color: "text-green-500" },
       { name: "Node.js", icon: <FaNodeJs />, color: "text-green-500" },
       { name: "Express.js", icon: <span>🚂</span>, color: "text-gray-400" },
       { name: "Django", icon: <span>🐍</span>, color: "text-green-700" },
@@ -74,13 +87,30 @@ export default function SkillsPage() {
       { name: "MongoDB", icon: <SiMongodb />, color: "text-green-600" },
       { name: "RDBMS", icon: <FaDatabase />, color: "text-orange-400" },
       { name: "MySQL", icon: <SiMysql />, color: "text-blue-600" },
-      { name: "PostgreSQL", icon: <span>🐘</span>, color: "text-blue-700" },
+      { name: "PostgreSQL", icon: <SiPostgresql />, color: "text-blue-700" },
+      {
+        name: "Firebase Firestore",
+        icon: <SiFirebase />,
+        color: "text-yellow-500",
+      },
     ],
     Tools: [
       { name: "GitHub", icon: <span>🐙</span>, color: "text-white" },
       { name: "Git", icon: <FaGitAlt />, color: "text-red-500" },
       { name: "Postman", icon: <span>📬</span>, color: "text-orange-500" },
       { name: "VS Code", icon: <span>🖥️</span>, color: "text-blue-500" },
+      {
+        name: "Android Studio",
+        icon: <SiAndroidstudio />,
+        color: "text-green-400",
+      },
+      { name: "Eclipse", icon: <SiEclipseide />, color: "text-purple-500" },
+      {
+        name: "Spring Tool Suite",
+        icon: <SiSpring />,
+        color: "text-green-500",
+      },
+      { name: "Bruno", icon: <span>🐶</span>, color: "text-orange-400" },
     ],
     Concepts: [
       { name: "OOPs", icon: <span>🧩</span>, color: "text-pink-500" },
@@ -96,6 +126,13 @@ export default function SkillsPage() {
         icon: <span>⚡</span>,
         color: "text-purple-400",
       },
+      {
+        name: "Clean Architecture",
+        icon: <span>🏛️</span>,
+        color: "text-slate-300",
+      },
+      { name: "MVVM", icon: <span>🔷</span>, color: "text-blue-400" },
+      { name: "RBAC", icon: <span>🔐</span>, color: "text-red-400" },
     ],
     "Soft Skills": [
       {
@@ -115,16 +152,13 @@ export default function SkillsPage() {
 
   return (
     <main className="px-6 md:px-20 py-24 max-w-6xl">
-      {/* Page Heading */}
       <h1 className="text-4xl font-bold text-cyan-400 mb-6">Skills</h1>
-      {/* Elite Intro */}
       <p className="text-slate-300 mb-12 max-w-3xl">
         Showcasing the cutting-edge technologies and tools I leverage to
         architect, develop, and optimize robust, scalable, and high-performance
         software solutions.
       </p>
 
-      {/* Skill Sections */}
       <div className="grid md:grid-cols-2 gap-10">
         {Object.entries(skills).map(([category, items], idx) => (
           <div key={idx}>
