@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
-import { FcBusinessman } from "react-icons/fc";
+import Image from "next/image";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { usePathname } from "next/navigation";
 
@@ -31,7 +31,15 @@ export default function Navbar() {
             href="/"
             className="flex items-center gap-3 text-lg font-semibold tracking-wide text-white hover:text-cyan-400 transition"
           >
-            <FcBusinessman size={28} />
+            {/* <FcBusinessman size={28} /> */}
+            <Image
+              src="/profile.png"
+              alt="Ritesh Dhamale"
+              width={36}
+              height={36}
+              className="rounded-full object-cover border border-cyan-400/50"
+              priority
+            />
             <span className="text-shine">Ritesh Dhamale</span>
           </Link>
 
